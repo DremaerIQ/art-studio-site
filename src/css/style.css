@@ -145,11 +145,11 @@ nav {
     font-weight: 700;
 }
 
-.about {
+.about, .advantages {
     position: relative;
 }
 
-.about__content {
+.about__content, .advantages__content {
     width: 100%;
     height: 100%;
 
@@ -165,19 +165,38 @@ nav {
     }
 }
 
-.about__title {
-    font-size: clamp(20px, 9dvw, 40px);
+.advantages__title {
+    color: var(--black);
 }
 
-.about__text {
+.about__title, .advantages__title {
+    font-size: clamp(15px, 7dvw, 40px);
+}
+
+.about__text, .advantages__text {
     font-size: clamp(10px, 3dvw, 40px);
 }
 
 .about__background.background {
+    background-color: #ff6969e6;
+
+    &>.container {
+        justify-content: space-between;
+    }
+}
+
+.advantages__background.background {
+    background-color: rgb(255 228 157);
+
+    & .background__second-text {
+        flex-grow: 1;
+        font-size: clamp(10px, 5dvw, 50px);
+    }
+}
+
+.about__background.background, .advantages__background.background {
     width: 100%;
     height: 100%;
-
-    background-color: #ff6969e6;
 
     position: absolute;
     top: 0;
@@ -185,13 +204,13 @@ nav {
 
     &>.container {
         display: flex;
-        justify-content: space-between;
     }
 
     & .background__text {
-        font-size: clamp(20px, 9dvw, 100px);
+        font-size: clamp(20px, 9dvw, 130px);
         font-weight: 700;
         opacity: 0.15;
+        white-space: nowrap;
     }
 
     & .background__figures {
@@ -230,6 +249,21 @@ nav {
     align-self: flex-start;
 
     background-color: #e36fc3;
+}
+
+@media screen and (max-width: 1450px) {
+    .advantages__background.background > .container {
+        flex-direction: column;
+        justify-content: space-between;
+
+        & > .background__second-text {
+            flex-grow: 0;
+        }
+    }
+
+    .advantages__img {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 750px) {
