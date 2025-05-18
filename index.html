@@ -141,6 +141,46 @@
                 </div>
             </div>
         </section>
+
+        <section class="form">
+            <div class="form__background-left"></div>
+
+            <div class="form__content">
+                <h2 class="form__title">
+                    Связаться с нами
+                </h2>
+                
+                <form class="form__action" action="#">
+                    <div class="form__wrapper">
+                        <label for="name">Имя</label>
+                        <input name="name" id="name" type="text" placeholder="Иван Иванов">
+                    </div>
+
+                    <div class="form__wrapper">
+                        <label for="email">Почта</label>
+                        <input name="email" id="email" type="email" placeholder="example@gmail.com">
+                    </div>
+
+                    <div class="form__wrapper">
+                        <label for="entity">Вид юр. лица</label>
+                        
+                        <select name="entity" id="entity">
+                            <option value="yes">Да, мы компания</option>
+                            <option value="no">Нет, я физ. лицо</option>
+                        </select>
+                    </div>
+
+                    <div class="form__wrapper">
+                        <label for="agreement">Согласие на обработку данных</label>
+                        <input name="agreement" id="agreement" type="checkbox">
+                    </div>
+
+                    <button class="form__btn">Отправить форму</button>
+                </form>
+            </div>
+            
+            <div class="form__background-right"></div>
+        </section>
     </main>
 </body>
 
